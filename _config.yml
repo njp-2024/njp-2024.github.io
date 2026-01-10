@@ -8,7 +8,6 @@ url: "https://njp-2024.github.io"
 # --- Build Settings ---
 # This ensures GitHub uses the modern build process
 markdown: kramdown
-theme: minimal # We aren't using this, but "minimal" is the fastest/lightest option
 
 # --- Plugins ---
 # These are standard for GitHub Pages
