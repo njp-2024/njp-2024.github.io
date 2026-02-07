@@ -1,10 +1,10 @@
 # _config.yml
 
 # --- Site Settings ---
-title: Nicholas Persaud
+title: Nicholas
 description: Software engineer and builder. Projects, writing, and professional background.
 url: "https://njp-2024.github.io"
-author: Nicholas Persaud
+author: Nicholas
 
 # --- Build Settings ---
 markdown: kramdown

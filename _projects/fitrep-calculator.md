@@ -12,22 +12,32 @@ order: 1
 
 ## Problem
 
-Performance evaluations in the USMC (known as FitReps) require calculating relative value scores and writing structured narrative sections. The process is manual, error-prone, and time-consuming — especially for reporting seniors managing multiple Marines.
+Performance evaluations in the U.S. Marine Corps require both quantitative scoring and tightly structured narrative assessments. The workflow combines rule-based calculations with subjective written justification, making it time-consuming and error-prone, particularly for evaluators responsible for multiple reports.
 
-There was no lightweight tool to automate the math or help draft narratives consistently.
+At the time, no lightweight tool existed to display the quantitative scores or help standardize narrative drafting while preserving human judgment.
+
+---
 
 ## Approach
 
-Built a web application using Streamlit that accepts evaluation inputs and computes relative value based on USMC guidelines. Integrated the OpenAI API to generate draft narrative sections from structured inputs, giving users a starting point they could refine.
+I built a web application that accepts structured evaluation inputs and computes relative value scores according to published guidelines. The application then uses a large language model to generate draft narrative sections aligned with those inputs, providing users with a consistent starting point rather than a finished product.
 
-Chose Streamlit for rapid prototyping and zero-infrastructure deployment. Hosted on GitHub Pages via a static export approach.
+The system separates deterministic logic (scoring and validation) from probabilistic output (narrative drafting), ensuring transparency and user control. Streamlit was selected to enable rapid iteration, low operational overhead, and easy access for non-technical users. The application integrates the OpenAI API behind a controlled interface, abstracting prompt construction while keeping the underlying inputs explicit.
+
+In addition to its operational purpose, the project serves as a controlled environment for evaluating different LLM sizes, deployment approaches, and interaction patterns (browser-based tools vs. API-driven integration).
+
+---
 
 ## Tradeoffs
 
-- **Streamlit vs. a custom frontend:** Streamlit was faster to build but limits UI customization. Acceptable for an internal tool, but would need rethinking for broader adoption.
-- **AI-generated narratives:** Useful as drafts, but require human review. Designed the UI to frame outputs as suggestions, not final products.
-- **No authentication:** Kept the tool stateless and open. No user data is stored.
+- **Rapid framework vs. custom frontend:** Streamlit enabled fast delivery and experimentation but limits UI customization. This was acceptable for an internal decision-support tool and helped inform what a future production-grade implementation would require.
+- **AI abstraction vs. cost transparency:** Centralizing AI interactions simplifies the user experience but introduces API costs. To explore this tradeoff, the tool also exposes structured prompts that can be used directly in browser-based LLM interfaces.
+- **Stateless design vs. personalization:** The application intentionally avoids authentication and persistent storage. This reduces complexity and risk while avoiding duplication of data already managed by existing enterprise systems.
+
+---
 
 ## Outcome
 
-The tool reduces evaluation preparation time and provides a consistent starting point for narrative writing. Demonstrated the value of combining domain knowledge with accessible AI tooling.
+The tool is currently in active testing and use, reducing manual calculation errors and improving consistency in narrative drafting. More broadly, it has become a practical reference point for discussing AI integration patterns, tradeoffs, and governance within an operational setting.
+
+The project remains iterative by design, with future work focused on usability refinement, evaluation of alternative models, and potential pathways to a more integrated production solution.
