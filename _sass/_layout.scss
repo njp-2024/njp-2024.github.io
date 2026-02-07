@@ -1,0 +1,47 @@
+.container {
+  max-width: $container-max;
+  margin: 0 auto;
+  padding: 0 $space-lg;
+  width: 100%;
+}
+
+.page-section {
+  padding: $space-3xl 0;
+}
+
+.page-title {
+  margin-bottom: $space-2xl;
+}
+
+// Two-column card grid
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $space-xl;
+
+  @media (min-width: 640px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+// Skip link for accessibility
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: $space-md;
+  background: $color-accent;
+  color: #fff;
+  padding: $space-sm $space-md;
+  border-radius: $border-radius;
+  z-index: 1000;
+  font-weight: 600;
+  font-size: $text-sm;
+
+  &:focus {
+    top: $space-md;
+  }
+}
+
+main {
+  flex: 1;
+}

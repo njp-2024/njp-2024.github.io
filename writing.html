@@ -1,0 +1,15 @@
+---
+layout: page
+title: Writing
+permalink: /writing/
+---
+
+{% if site.posts.size > 0 %}
+  <div class="post-list">
+    {% for post in site.posts %}
+      {% include post-card.html post=post %}
+    {% endfor %}
+  </div>
+{% else %}
+  <p class="empty-state">Posts coming soon.</p>
+{% endif %}

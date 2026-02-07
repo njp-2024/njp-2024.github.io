@@ -1,0 +1,83 @@
+body {
+  font-family: $font-sans;
+  font-size: $text-base;
+  line-height: $leading-normal;
+  color: $color-text;
+  background-color: $color-bg;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 700;
+  line-height: $leading-tight;
+  color: $color-text;
+}
+
+h1 { font-size: $text-3xl; }
+h2 { font-size: $text-2xl; }
+h3 { font-size: $text-xl;  }
+h4 { font-size: $text-lg;  }
+
+// Prose content (project bodies, blog posts, about page)
+.prose {
+  font-family: $font-serif;
+  font-size: $text-lg;
+  line-height: $leading-loose;
+  max-width: $content-max;
+
+  h2 {
+    font-family: $font-sans;
+    margin-top: $space-3xl;
+    margin-bottom: $space-md;
+  }
+
+  h3 {
+    font-family: $font-sans;
+    margin-top: $space-2xl;
+    margin-bottom: $space-sm;
+  }
+
+  p {
+    margin-bottom: $space-lg;
+  }
+
+  ul, ol {
+    list-style: disc;
+    padding-left: $space-xl;
+    margin-bottom: $space-lg;
+  }
+
+  ol {
+    list-style: decimal;
+  }
+
+  li {
+    margin-bottom: $space-sm;
+  }
+
+  a {
+    color: $color-accent;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: color $transition-fast;
+
+    &:hover {
+      color: $color-accent-hover;
+    }
+  }
+
+  code {
+    font-size: 0.9em;
+    background: $color-bg-subtle;
+    padding: 0.15em 0.4em;
+    border-radius: 3px;
+  }
+
+  blockquote {
+    border-left: 3px solid $color-border;
+    padding-left: $space-lg;
+    color: $color-text-muted;
+    margin-bottom: $space-lg;
+  }
+}

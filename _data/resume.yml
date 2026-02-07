@@ -1,0 +1,33 @@
+# pdf_url: /assets/resume.pdf
+
+experience:
+  - title: "Software Developer (Transitioning)"
+    organization: "Self-directed / Portfolio Projects"
+    location: "Remote"
+    date: "2024 — Present"
+    bullets:
+      - "Built Python-based tools for automating evaluation processes and data analysis."
+      - "Designed and deployed a multi-page portfolio site using Jekyll and GitHub Pages."
+      - "Integrated AI APIs to generate structured content from domain-specific inputs."
+
+  - title: "Military Officer"
+    organization: "United States Marine Corps"
+    location: "Various"
+    date: "2018 — 2024"
+    bullets:
+      - "Led teams of 30+ personnel in complex operational environments."
+      - "Managed planning, resource allocation, and execution under tight constraints."
+      - "Developed structured decision-making processes for high-stakes scenarios."
+
+education:
+  - degree: "Bachelor of Science"
+    institution: "University Placeholder"
+    year: "2018"
+
+skills:
+  - category: "Languages"
+    items: "Python, JavaScript, HTML, CSS/SCSS, SQL"
+  - category: "Frameworks & Tools"
+    items: "Jekyll, Streamlit, Git, GitHub Pages"
+  - category: "Concepts"
+    items: "Data analysis, API integration, automation, technical writing"

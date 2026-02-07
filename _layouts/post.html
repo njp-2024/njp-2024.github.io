@@ -1,0 +1,25 @@
+---
+layout: base
+---
+
+<section class="page-section">
+  <div class="container">
+    <a href="{{ '/writing/' | relative_url }}" class="back-link">&larr; All Posts</a>
+
+    <article>
+      <header class="post-header">
+        <h1 class="page-title">{{ page.title }}</h1>
+        <time class="post-header__date" datetime="{{ page.date | date_to_xmlschema }}">
+          {{ page.date | date: "%B %-d, %Y" }}
+        </time>
+        {% if page.summary %}
+          <p class="post-header__summary">{{ page.summary }}</p>
+        {% endif %}
+      </header>
+
+      <div class="prose">
+        {{ content }}
+      </div>
+    </article>
+  </div>
+</section>

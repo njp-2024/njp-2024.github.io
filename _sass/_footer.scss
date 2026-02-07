@@ -1,0 +1,32 @@
+.site-footer {
+  background: $color-bg-footer;
+  color: rgba(255, 255, 255, 0.6);
+  padding: $space-2xl 0;
+  margin-top: auto;
+}
+
+.footer-inner {
+  text-align: center;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: $space-lg;
+  margin-bottom: $space-md;
+}
+
+.footer-link {
+  font-size: $text-sm;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+  transition: color $transition-fast;
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+.footer-copy {
+  font-size: $text-xs;
+}

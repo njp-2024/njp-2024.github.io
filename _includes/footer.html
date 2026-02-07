@@ -1,0 +1,10 @@
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-links">
+      {% for link in site.data.social %}
+        <a href="{{ link.url }}" class="footer-link"{% if link.icon != "email" %} target="_blank" rel="noopener"{% endif %}>{{ link.name }}</a>
+      {% endfor %}
+    </div>
+    <p class="footer-copy">&copy; {{ site.time | date: '%Y' }} {{ site.title }}</p>
+  </div>
+</footer>

@@ -1,23 +1,48 @@
 # _config.yml
 
 # --- Site Settings ---
-title: NJP-2024 Portfolio
-description: Personal portfolio and project showcase for NJP-2024.
-url: "https://njp-2024.github.io" 
+title: Nicholas Persaud
+description: Software engineer and builder. Projects, writing, and professional background.
+url: "https://njp-2024.github.io"
+author: Nicholas Persaud
 
 # --- Build Settings ---
-# This ensures GitHub uses the modern build process
 markdown: kramdown
+permalink: pretty
+
+# --- Collections ---
+collections:
+  projects:
+    output: true
+    permalink: /projects/:title/
+
+# --- Default Front Matter ---
+defaults:
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: project
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+  - scope:
+      path: ""
+    values:
+      layout: page
 
 # --- Plugins ---
-# These are standard for GitHub Pages
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 
 # --- Exclude from Build ---
-# Don't publish these files to the actual website
 exclude:
   - README.md
+  - CLAUDE.md
+  - PORTFOLIO_PRD.md
   - Gemfile
   - Gemfile.lock
+  - LICENSE
