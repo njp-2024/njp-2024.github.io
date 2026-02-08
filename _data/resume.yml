@@ -1,0 +1,33 @@
+# yaml-language-server: $schema=https://json-schema.org/draft/2020-12/schema
+# pdf_url: /assets/resume.pdf
+
+experience:
+  - title: "Software Developer (Transitioning)"
+    organization: "Independent Projects"
+    location: "Remote"
+    date: "2024 — Present"
+    bullets:
+      - "Designed and built Python-based tools to automate evaluation workflows and perform structured data analysis."
+      - "Developed small web applications and APIs to support data processing and decision-support use cases."
+
+  - title: "Infantry Officer"
+    organization: "United States Marine Corps"
+    location: "expected retirement 2028"
+    date: "2008 — Present"
+    bullets:
+      - "Led and developed teams of 30+ personnel in complex, time-constrained environments."
+      - "Planned and executed operations requiring structured decision-making, risk assessment, and resource management."
+      - "Applied disciplined processes to analyze problems, evaluate tradeoffs, and make high-impact decisions."
+
+education:
+  - degree: "Master of Science in Computer Science"
+    institution: "Georgia Institute of Technology"
+    year: "expected 2027"
+
+skills:
+  - category: "Languages"
+    items: "Python, Java"
+  - category: "Frameworks & Tools"
+    items: "Streamlit, Git, Docker, Numpy/Pandas, Jupyter"
+  - category: "Concepts"
+    items: "Data analysis, API integration, automation, technical writing"

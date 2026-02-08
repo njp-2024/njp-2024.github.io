@@ -1,0 +1,11 @@
+<a href="{{ project.url | relative_url }}" class="project-card fade-in">
+  <h3 class="project-card__title">{{ project.title }}</h3>
+  <p class="project-card__desc">{{ project.description }}</p>
+  {% if project.tech %}
+    <div class="project-card__tags">
+      {% for tag in project.tech %}
+        <span class="tag">{{ tag }}</span>
+      {% endfor %}
+    </div>
+  {% endif %}
+</a>

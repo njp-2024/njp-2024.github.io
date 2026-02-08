@@ -1,0 +1,69 @@
+---
+layout: page
+title: Resume
+permalink: /resume/
+---
+
+{% if site.data.resume.pdf_url %}
+  <p style="margin-bottom: 2rem;">
+    <a href="{{ site.data.resume.pdf_url | relative_url }}" class="btn btn--small" target="_blank" rel="noopener">Download PDF</a>
+  </p>
+{% endif %}
+
+<div class="resume">
+
+  {% if site.data.resume.experience %}
+    <section class="resume-section fade-in">
+      <h2 class="resume-section__title">Experience</h2>
+      {% for job in site.data.resume.experience %}
+        <div class="resume-entry">
+          <div class="resume-entry__header">
+            <h3 class="resume-entry__title">{{ job.title }} — {{ job.organization }}</h3>
+            <div class="resume-entry__meta">
+              <time>{{ job.date }}</time>
+              <span>{{ job.location }}</span>
+            </div>
+          </div>
+          {% if job.bullets %}
+            <ul class="resume-entry__list">
+              {% for bullet in job.bullets %}
+                <li>{{ bullet }}</li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </section>
+  {% endif %}
+
+  {% if site.data.resume.education %}
+    <section class="resume-section fade-in">
+      <h2 class="resume-section__title">Education</h2>
+      {% for edu in site.data.resume.education %}
+        <div class="resume-entry">
+          <div class="resume-entry__header">
+            <h3 class="resume-entry__title">{{ edu.degree }} — {{ edu.institution }}</h3>
+            <div class="resume-entry__meta">
+              <time>{{ edu.year }}</time>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </section>
+  {% endif %}
+
+  {% if site.data.resume.skills %}
+    <section class="resume-section fade-in">
+      <h2 class="resume-section__title">Skills</h2>
+      <div class="resume-skills">
+        {% for skill in site.data.resume.skills %}
+          <div class="resume-skill-row">
+            <span class="resume-skill-row__category">{{ skill.category }}</span>
+            <span class="resume-skill-row__items">{{ skill.items }}</span>
+          </div>
+        {% endfor %}
+      </div>
+    </section>
+  {% endif %}
+
+</div>

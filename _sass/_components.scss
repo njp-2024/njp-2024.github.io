@@ -1,0 +1,212 @@
+// --- Hero ---
+.hero {
+  padding: $space-4xl 0;
+  display: flex;
+  align-items: center;
+  min-height: 60vh;
+}
+
+.hero-inner {
+  max-width: $content-max;
+}
+
+.hero-name {
+  font-size: $text-4xl;
+  font-weight: 700;
+  margin-bottom: $space-md;
+
+  @media (max-width: 640px) {
+    font-size: $text-3xl;
+  }
+}
+
+.hero-tagline {
+  font-size: $text-xl;
+  color: $color-accent;
+  font-weight: 500;
+  margin-bottom: $space-lg;
+}
+
+.hero-summary {
+  font-size: $text-lg;
+  color: $color-text-muted;
+  line-height: $leading-loose;
+  margin-bottom: $space-2xl;
+  max-width: 540px;
+}
+
+// --- Buttons ---
+.btn {
+  display: inline-block;
+  padding: $space-sm $space-lg;
+  font-size: $text-sm;
+  font-weight: 600;
+  color: $color-accent;
+  border: 1.5px solid $color-accent;
+  border-radius: $border-radius;
+  transition: background $transition-base, color $transition-base;
+
+  &:hover {
+    background: $color-accent;
+    color: #fff;
+  }
+}
+
+.btn--primary {
+  background: $color-accent;
+  color: #fff;
+
+  &:hover {
+    background: $color-accent-hover;
+  }
+}
+
+.btn--small {
+  padding: $space-xs $space-sm;
+  font-size: $text-xs;
+}
+
+// --- Project Cards ---
+.project-card {
+  display: flex;
+  flex-direction: column;
+  padding: $space-xl;
+  border: 1px solid $color-border;
+  border-radius: $border-radius-lg;
+  background: $color-bg;
+  transition: transform $transition-base, box-shadow $transition-base, border-color $transition-base;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    border-color: $color-accent;
+  }
+}
+
+.project-card__title {
+  font-size: $text-xl;
+  margin-bottom: $space-sm;
+}
+
+.project-card__desc {
+  font-size: $text-sm;
+  color: $color-text-muted;
+  line-height: $leading-normal;
+  margin-bottom: $space-lg;
+  flex: 1;
+}
+
+.project-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-sm;
+}
+
+// --- Tags ---
+.tag {
+  display: inline-block;
+  font-size: $text-xs;
+  font-weight: 500;
+  color: $color-text-muted;
+  background: $color-bg-subtle;
+  padding: $space-xs $space-sm;
+  border-radius: $border-radius;
+}
+
+// --- Post Cards ---
+.post-card {
+  padding: $space-lg 0;
+  border-bottom: 1px solid $color-border;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.post-card__title {
+  font-size: $text-xl;
+  margin-bottom: $space-xs;
+}
+
+.post-card__link {
+  transition: color $transition-fast;
+
+  &:hover {
+    color: $color-accent;
+  }
+}
+
+.post-card__date {
+  font-size: $text-sm;
+  color: $color-text-muted;
+  display: block;
+  margin-bottom: $space-sm;
+}
+
+.post-card__excerpt {
+  font-size: $text-sm;
+  color: $color-text-muted;
+  line-height: $leading-normal;
+}
+
+// --- Back Link ---
+.back-link {
+  display: inline-block;
+  font-size: $text-sm;
+  font-weight: 500;
+  color: $color-text-muted;
+  margin-bottom: $space-xl;
+  transition: color $transition-fast;
+
+  &:hover {
+    color: $color-accent;
+  }
+}
+
+// --- Project Header (individual project page) ---
+.project-header {
+  margin-bottom: $space-2xl;
+}
+
+.project-header__desc {
+  font-size: $text-lg;
+  color: $color-text-muted;
+  margin-bottom: $space-lg;
+}
+
+.project-header__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: $space-md;
+}
+
+.project-header__links {
+  display: flex;
+  gap: $space-sm;
+}
+
+// --- Post Header (individual post page) ---
+.post-header {
+  margin-bottom: $space-2xl;
+}
+
+.post-header__date {
+  display: block;
+  font-size: $text-sm;
+  color: $color-text-muted;
+  margin-bottom: $space-md;
+}
+
+.post-header__summary {
+  font-size: $text-lg;
+  color: $color-text-muted;
+  line-height: $leading-normal;
+}
+
+// --- Empty State ---
+.empty-state {
+  color: $color-text-muted;
+  font-size: $text-lg;
+  padding: $space-3xl 0;
+}

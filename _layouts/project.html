@@ -1,0 +1,39 @@
+---
+layout: base
+---
+
+<section class="page-section">
+  <div class="container">
+    <a href="{{ '/projects/' | relative_url }}" class="back-link">&larr; All Projects</a>
+
+    <div class="project-header">
+      <h1 class="page-title">{{ page.title }}</h1>
+      {% if page.description %}
+        <p class="project-header__desc">{{ page.description }}</p>
+      {% endif %}
+      <div class="project-header__meta">
+        {% if page.tech %}
+          <div class="project-card__tags">
+            {% for tag in page.tech %}
+              <span class="tag">{{ tag }}</span>
+            {% endfor %}
+          </div>
+        {% endif %}
+        {% if page.repo or page.live %}
+          <div class="project-header__links">
+            {% if page.repo %}
+              <a href="{{ page.repo }}" class="btn btn--small" target="_blank" rel="noopener">Repository</a>
+            {% endif %}
+            {% if page.live %}
+              <a href="{{ page.live }}" class="btn btn--small" target="_blank" rel="noopener">Live Demo</a>
+            {% endif %}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="prose">
+      {{ content }}
+    </div>
+  </div>
+</section>

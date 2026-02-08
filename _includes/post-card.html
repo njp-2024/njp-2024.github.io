@@ -1,0 +1,11 @@
+<article class="post-card fade-in">
+  <a href="{{ post.url | relative_url }}" class="post-card__link">
+    <h3 class="post-card__title">{{ post.title }}</h3>
+  </a>
+  <time class="post-card__date" datetime="{{ post.date | date_to_xmlschema }}">
+    {{ post.date | date: "%B %-d, %Y" }}
+  </time>
+  {% if post.excerpt %}
+    <p class="post-card__excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+  {% endif %}
+</article>

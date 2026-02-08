@@ -1,0 +1,83 @@
+.resume {
+  max-width: $content-max;
+}
+
+.resume-section {
+  margin-bottom: $space-3xl;
+}
+
+.resume-section__title {
+  font-size: $text-sm;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: $color-text-muted;
+  padding-bottom: $space-sm;
+  border-bottom: 2px solid $color-border;
+  margin-bottom: $space-xl;
+}
+
+.resume-entry {
+  margin-bottom: $space-xl;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.resume-entry__header {
+  margin-bottom: $space-sm;
+}
+
+.resume-entry__title {
+  font-size: $text-lg;
+  font-weight: 600;
+}
+
+.resume-entry__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-lg;
+  font-size: $text-sm;
+  color: $color-text-muted;
+}
+
+.resume-entry__list {
+  list-style: disc;
+  padding-left: $space-xl;
+
+  li {
+    font-size: $text-base;
+    line-height: $leading-normal;
+    margin-bottom: $space-xs;
+    color: $color-text;
+  }
+}
+
+.resume-skills {
+  display: flex;
+  flex-direction: column;
+  gap: $space-md;
+}
+
+.resume-skill-row {
+  display: flex;
+  gap: $space-md;
+  font-size: $text-base;
+  line-height: $leading-normal;
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+    gap: $space-xs;
+  }
+}
+
+.resume-skill-row__category {
+  font-weight: 600;
+  min-width: 160px;
+  flex-shrink: 0;
+}
+
+.resume-skill-row__items {
+  color: $color-text-muted;
+}
